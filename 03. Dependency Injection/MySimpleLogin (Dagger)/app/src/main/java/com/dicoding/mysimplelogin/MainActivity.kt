@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     @Inject
     lateinit var userRepository: UserRepository
+    @Inject
+    lateinit var userRepository2: UserRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         (application as MyApplication).appComponent.inject(this)
@@ -20,6 +22,9 @@ class MainActivity : AppCompatActivity() {
 
 //        val sesi = SessionManager(this)
 //        userRepository = UserRepository.getInstance(sesi)
+
+        userRepository.checkInstance()
+        userRepository2.checkInstance()
 
         if (userRepository.isUserLogin()) {
             moveToHomeActivity()
