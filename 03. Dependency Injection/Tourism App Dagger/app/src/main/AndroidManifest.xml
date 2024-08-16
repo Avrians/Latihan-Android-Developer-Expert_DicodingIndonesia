@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.dicoding.tourismapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,7 +16,8 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.TourismApp.NoActionBar"
-            android:exported="true"> <!-- Menambahkan android:exported -->
+            android:exported="true"
+            tools:node="merge"> <!-- android:exported harus true karena activity ini memiliki intent filter -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,7 +28,7 @@
             android:name=".detail.DetailTourismActivity"
             android:label="@string/title_activity_detail_home"
             android:theme="@style/Theme.TourismApp.NoActionBar"
-            android:exported="false" /> <!-- Menambahkan android:exported -->
+            android:exported="false" /> <!-- android:exported false karena activity ini tidak memiliki intent filter dan hanya digunakan secara internal -->
 
     </application>
 
