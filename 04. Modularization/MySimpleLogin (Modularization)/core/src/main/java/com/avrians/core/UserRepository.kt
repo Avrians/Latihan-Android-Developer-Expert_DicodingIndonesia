@@ -1,4 +1,4 @@
-package com.dicoding.mysimplelogin
+package com.avrians.core
 
 class UserRepository(private val sesi: SessionManager) {
 
