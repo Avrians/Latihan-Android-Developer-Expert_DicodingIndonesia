@@ -8,7 +8,7 @@ apply(from = "../shared_dependencies.gradle")
 
 android {
     namespace = "com.avrians.core"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 16
@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -40,7 +43,7 @@ dependencies {
 
     //room
     implementation("androidx.room:room-runtime:2.6.1")
-//    ksp("androidx.room:room-compiler:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
     androidTestImplementation("androidx.room:room-testing:2.6.1")
 
     //retrofit
@@ -53,4 +56,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
     implementation("androidx.room:room-ktx:2.6.1")
     api("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
+
+    // koin
+    implementation ("io.insert-koin:koin-core:3.3.2")
+    implementation ("io.insert-koin:koin-android:3.3.2")
 }

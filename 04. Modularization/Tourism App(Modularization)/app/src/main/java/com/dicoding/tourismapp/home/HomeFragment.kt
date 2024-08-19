@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.tourismapp.R
-import com.dicoding.tourismapp.core.data.Resource
+import com.avrians.core.data.Resource
 import com.dicoding.tourismapp.core.ui.TourismAdapter
 import com.dicoding.tourismapp.databinding.FragmentHomeBinding
 import com.dicoding.tourismapp.detail.DetailTourismActivity
@@ -48,12 +48,12 @@ class HomeFragment : Fragment() {
             homeViewModel.tourism.observe(viewLifecycleOwner, { tourism ->
                 if (tourism != null) {
                     when (tourism) {
-                        is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
-                        is Resource.Success -> {
+                        is com.avrians.core.data.Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
+                        is com.avrians.core.data.Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
                             tourismAdapter.setData(tourism.data)
                         }
-                        is Resource.Error -> {
+                        is com.avrians.core.data.Resource.Error -> {
                             binding.progressBar.visibility = View.GONE
                             binding.viewError.root.visibility = View.VISIBLE
                             binding.viewError.tvError.text = tourism.message ?: getString(R.string.something_wrong)
