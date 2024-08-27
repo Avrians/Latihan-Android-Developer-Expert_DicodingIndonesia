@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MyCustomLint"
 include(":app")
+include(":lint")
