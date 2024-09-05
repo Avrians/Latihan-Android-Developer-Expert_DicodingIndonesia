@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "655653898285",
+    "project_id": "my-report-app-471eb",
+    "storage_bucket": "my-report-app-471eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655653898285:android:0b87f87c87e8b0891f10a4",
+        "android_client_info": {
+          "package_name": "com.avrians.myreportapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIdm8SoEgyTCPBuJj5lEeHy6jYMFSY3Do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
