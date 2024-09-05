@@ -49,4 +49,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation ("com.google.firebase:firebase-analytics-ktx:21.2.0")
     implementation ("com.google.firebase:firebase-crashlytics:18.3.5")
+    implementation ("com.jakewharton.timber:timber:4.7.1")
 }
